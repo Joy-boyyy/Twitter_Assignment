@@ -5,6 +5,7 @@ const { open } = require("sqlite");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+
 const app = express();
 app.use(express.json());
 const dbPath = path.join(__dirname, "twitterClone.db");
@@ -37,6 +38,7 @@ const getFollowingPeopleIdsOfUser = async (username) => {
 };
 
 //authentication token
+//this is checking purpose
 
 const authentication = (request, response, next) => {
   let jwtToken;
